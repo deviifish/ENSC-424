@@ -1,0 +1,46 @@
+settings =
+{
+	orientation = 
+	{
+		default = "portrait", 
+		supported = { "portrait", },
+	},
+
+	iphone =
+	{
+		plist =
+		{
+			-- UIApplicationExitsOnSuspend = true, -- default is false
+			CFBundleIconFile = "Icon.png",
+			CFBundleIconFiles =
+			{
+				"Icon.png", 
+				"Icon@2x.png", 
+				"Icon-72.png", 
+			},
+
+		},
+	},
+	
+	plugins =
+	{
+		-- key is the name passed to Lua's 'require()'
+		["CoronaProvider.native.popup.social"] =
+		{
+			-- required
+			publisherId = "com.coronalabs",
+		},
+	},
+	
+	android =
+   	{ 
+        
+		usesPermissions =
+		{
+			"android.permission.INTERNET", 
+			"android.permission.READ_EXTERNAL_STORAGE",
+			"android.permission.CAMERA",
+			"android.permission.WRITE_EXTERNAL_STORAGE"
+		}, 
+   	},
+}
